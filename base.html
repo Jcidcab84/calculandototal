@@ -19,9 +19,19 @@
         
               <p>Cantidad:
                 <span class="cantidad">0</span>
-                <button 
+                <button onclick="
+                let cantidad = document.querySelector('.cantidad');
+                let aumento = Number(cantidad.innerHTML);
+                aumento = aumento+1;
+                cantidad.innerHTML= aumento;
+                "
                 >+</button>
-                <button
+                <button onclick="
+                let cantidad = document.querySelector('.cantidad');
+                let disminuye = Number(cantidad.innerHTML);
+                disminuye = disminuye-1;
+                cantidad.innerHTML = disminuye;
+                "
                 >-</button>
               </p>
             </div>
