@@ -20,18 +20,31 @@
               <p>Cantidad:
                 <span class="cantidad">0</span>
                 <button onclick="
-                let cantidad = document.querySelector('.cantidad');
-                let aumento = Number(cantidad.innerHTML);
-                aumento = aumento+1;
-                cantidad.innerHTML= aumento;
+
+                cantidad = document.querySelector('.cantidad');
+                let incremento = Number(cantidad.innerHTML);
+                incremento = incremento + 1;
+                cantidad.innerHTML = incremento;
+
+
+                totalFinal = document.querySelector('.valor-total');
+                final = Number(incremento * precio);
+                totalFinal.innerHTML = final;
                 "
                 >+</button>
+
+
                 <button onclick="
                 let cantidad = document.querySelector('.cantidad');
-                let disminuye = Number(cantidad.innerHTML);
-                disminuye = disminuye-1;
-                cantidad.innerHTML = disminuye;
-                "
+                let decremento = Number(cantidad.innerHTML);
+                decremento = decremento-1;
+                cantidad.innerHTML = decremento;
+
+
+                totalFinal = document.querySelector('.valor-total');
+                final = Number(decremento * precio );
+                totalFinal.innerHTML = final;"
+    
                 >-</button>
               </p>
             </div>
@@ -40,7 +53,9 @@
     </section>
 
     <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span> </p>
+        <p>Total a pagar: $<span class="valor-total" >
+            
+        </span> </p>
     </div>
 
     <script src="index.js">
